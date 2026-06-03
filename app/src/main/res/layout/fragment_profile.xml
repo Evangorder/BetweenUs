@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/bg"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Top Toolbar -->
+    <TextView
+        android:id="@+id/profileToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#3290c8"
+        android:elevation="6dp"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp"
+        android:text="Profile"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_stats"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_margin="12dp"
+        android:background="@android:color/transparent"
+        android:elevation="7dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/stats_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#A8E6CF" />
+
+
+    <ImageButton
+        android:id="@+id/btn_shop"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="12dp"
+        android:background="@android:color/transparent"
+        android:elevation="7dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/shop_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#ffc64a" />
+
+    <LinearLayout
+        android:id="@+id/profileSection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/profileToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Top Row (Image + Info) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Avatar -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="5dp"
+                android:src="@drawable/profilebtn_filled"
+                app:strokeColor="#2196F3"
+                app:strokeWidth="5dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+
+            <!-- Right Side Info -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/profileUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profileBio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_gravity="center"
+                    android:text="your bio here "
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Friends Row -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/friendsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 Friends"
+                android:padding="10dp"
+                android:textColor="#3290c8"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="☻"
+                android:textColor="#3290c8"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:id="@+id/addFriendLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Friend"
+                android:padding="10dp"
+                android:textColor="#3290c8"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:clickable="true"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Schedule Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/scheduleCard"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_width="0dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileSection">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="#CF3290C8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="10dp"
+                    android:text="Schedule"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_monthly"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Month"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/btn_Weekly"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Week"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Schedule Container -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/googleCalendarContainer"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@drawable/image_round"
+                android:elevation="6dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/bg2Image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/bg"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Large" />
+
+
+
+                <com.applandeo.materialcalendarview.CalendarView
+                    android:id="@+id/materialCalendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:headerColor="#3290c8"
+                    app:headerLabelColor="@color/white"
+                    app:todayLabelColor="#3290c8"
+                    app:highlightedDaysLabelsColor="@color/black"
+
+                    app:abbreviationsBarColor ="#d9f1ffff"
+                    android:padding="20dp"
+                    app:anotherMonthsDaysLabelsColor="@color/white"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/weeklyScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <GridLayout
+                        android:id="@+id/weeklyContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="1"
+                        android:padding="12dp"/>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/premiumPlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#d9f1ff"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:visibility="gone"> <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌟 PREMIUM FEATURE!"
+                android:textColor="#6B4E71"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Get premium to unlock your personal\nMonthly and Weekly schedule!"
+                    android:textColor="#6B4E71"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btn_get_premium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#3290c8"
+                    android:text="Upgrade Now"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

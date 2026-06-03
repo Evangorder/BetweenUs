@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/chatbtn_empty"
+        android:title="Chat" />
+
+    <item
+        android:id="@+id/navigation_memories"
+        android:icon="@drawable/memorybtn_empty"
+        android:iconTint="@color/white"
+        android:title="Memories" />
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/homebtn_empty"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_productivity"
+        android:icon="@drawable/productivitybtn_empty"
+        android:title="Productivity" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/profilebtn_empty"
+        android:title="Profile" />
+
+
+
+</menu>

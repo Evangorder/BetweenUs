@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- LEFT AVATAR CONTAINER -->
+
+    <LinearLayout
+        android:id="@+id/avatarGroup"
+        android:layout_width="0dp"
+        android:layout_height="450dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    <LinearLayout
+        android:id="@+id/containerLeft"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        android:orientation="vertical"
+        android:translationY="-20dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/containerCenter"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <include
+            android:id="@+id/avatarLeft"
+            layout="@layout/item_avatar"/>
+
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/containerCenter"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            app:layout_constraintStart_toEndOf="@id/containerLeft"
+            app:layout_constraintEnd_toStartOf="@id/containerRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <include
+                android:id="@+id/avatarCenter"
+                layout="@layout/item_avatar"/>
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerRight"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:translationY="-20dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/containerCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <include
+            android:id="@+id/avatarRight"
+            layout="@layout/item_avatar"/>
+
+    </LinearLayout>
+
+    <!-- CENTER AVATAR CONTAINER -->
+
+
+    </LinearLayout>
+
+    <!-- RIGHT AVATAR CONTAINER -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

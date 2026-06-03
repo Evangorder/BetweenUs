@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.betweenus.fragments.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_productivity"
+        android:name="com.example.betweenus.fragments.ProductivityFragment"
+        android:label="Productivity"
+        tools:layout="@layout/fragment_productivity" />
+
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.example.betweenus.fragments.ChatListFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat_list">
+        <action
+            android:id="@+id/action_navigation_chat_list_to_messagingFragment"
+            app:destination="@id/messagingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/messagingFragment"
+        android:name="com.example.betweenus.fragments.MessagingFragment"
+        android:label="Direct Message"
+        tools:layout="@layout/fragment_messaging">
+        <argument
+            android:name="receiverId"
+            app:argType="integer" />
+        <argument
+            android:name="receiverName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_memories"
+        android:name="com.example.betweenus.fragments.MemoriesFragment"
+        android:label="Memories"
+        tools:layout="@layout/fragment_memories" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.betweenus.fragments.ProfileFragment"
+        android:label="Profile" />
+
+</navigation>
